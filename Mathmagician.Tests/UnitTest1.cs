@@ -7,8 +7,28 @@ namespace Mathmagician.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ICanBeNamedAnything()
         {
+            //Arrange
+
+            //Act
+
+            //Assert
+            Assert.IsTrue(true);
+        }
+        [TestMethod]
+        public void TestMTabTwice()
+        {
+            //Arrange
+            //Act
+            //Assert
+            Assert.IsTrue(true);
+            Assert.Fail();
+        }
+        
+        public void ThisIsNotATest()
+        {
+
         }
     }
 }
