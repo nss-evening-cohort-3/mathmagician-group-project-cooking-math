@@ -14,7 +14,7 @@ namespace Mathmagician
             int x = numOfIntegersToWrite;
             List<int> IntegersToWrite = new List<int>();
             
-            for (int i = 0; i <= x; i++)
+            for (int i = 1; i <= x; i++)
             {
                 IntegersToWrite.Add(i);
             }
