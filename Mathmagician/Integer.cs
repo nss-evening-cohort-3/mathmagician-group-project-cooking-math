@@ -12,13 +12,13 @@ namespace Mathmagician
         public List<int> Make_Integers(int numOfIntegersToWrite)
         {
             int x = numOfIntegersToWrite;
-            List<int> IntegersToWrite = new List<int>();
+            List<int> IntList = new List<int>();
             
             for (int i = 0; i <= x; i++)
             {
-                IntegersToWrite.Add(i);
+                IntList.Add(i);
             }
-            return IntegersToWrite;
+            return IntList;
         }
 
         public void WriteIntegersToConsole(List<int> IntegersToWrite)
