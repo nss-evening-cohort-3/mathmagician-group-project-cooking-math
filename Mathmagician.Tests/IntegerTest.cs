@@ -29,7 +29,7 @@ namespace Mathmagician.Tests
             
             List<int> actual = intTest.Make_Integers(NumOfIntegersToWrite);
             //Assert
-            Assert.AreEqual(testlist.Count, NumOfIntegersToWrite);
+            Assert.AreEqual(actual.Count, NumOfIntegersToWrite);
         }
 
     }
