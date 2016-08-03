@@ -20,13 +20,5 @@ namespace Mathmagician
             }
             return IntList;
         }
-
-        public void WriteIntegersToConsole(List<int> IntegersToWrite)
-        {
-            foreach (var integer in IntegersToWrite)
-            {
-                Console.WriteLine(integer);
-            }
-        }
     }
 }

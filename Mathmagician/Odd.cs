@@ -22,13 +22,5 @@ namespace Mathmagician
             }
             return OddList;
         }
-
-        public void WriteOddsToConsole(List<int> OddList)
-        {
-            foreach (var integer in OddList)
-            {
-                Console.WriteLine(integer);
-            }
-        }
     }
 }

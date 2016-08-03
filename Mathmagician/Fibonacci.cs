@@ -23,12 +23,5 @@ namespace Mathmagician
             }
             return FibList;
         }
-        public void writeFibNumbersToConsole(List<int> NumberofFibsToWrite)
-        {
-            foreach (var integer in NumberofFibsToWrite)
-            {
-                Console.WriteLine(integer);
-            }
-        }
     }
 }
