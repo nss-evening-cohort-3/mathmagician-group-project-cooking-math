@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Integer
+    public class Integer : IMakeIntegerList 
     {
 
-        public List<int> Make_Integers(int numOfIntegersToWrite)
+        public List<int> MakeListOfIntegers(int numOfIntegersToWrite)
         {
             int x = numOfIntegersToWrite;
             List<int> IntList = new List<int>();

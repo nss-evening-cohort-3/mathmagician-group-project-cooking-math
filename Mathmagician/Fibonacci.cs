@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    class Fibonacci
+    class Fibonacci : IMakeIntegerList
     {
-        public List<int> Make_Fibonacci(int numbersToAdd)
+        public List<int> MakeListOfIntegers(int numbersToAdd)
         {
             int x = numbersToAdd;
             int a = 0;

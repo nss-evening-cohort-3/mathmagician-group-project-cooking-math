@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Odd
+    public class Odd : IMakeIntegerList
     {
-        public List<int> StoreOddNumbers(int numOfOddNumbersToWrite)
+        public List<int> MakeListOfIntegers(int numOfOddNumbersToWrite)
         {
             int x = numOfOddNumbersToWrite * 2;
             List<int> OddList = new List<int>();
