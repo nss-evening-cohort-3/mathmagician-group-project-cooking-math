@@ -9,6 +9,8 @@ namespace Mathmagician
     interface IMakeIntegerList
     {
         List<int> MakeListOfIntegers(int number);
-        
+        void WriteNumberListToConsole(List<int> integers);
+
+
     }
 }
