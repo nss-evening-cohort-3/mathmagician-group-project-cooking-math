@@ -10,6 +10,19 @@ namespace Mathmagician
     {
         static void Main(string[] args)
         {
+          
+
+
+        }
+        public static void WriteNumberListToConsole(List<int> NumList)
+        {
+
+            foreach (var integer in NumList)
+            {
+                Console.WriteLine(integer);
+            }
+                Console.ReadLine();
         }
     }
 }
+
