@@ -60,7 +60,6 @@
     <Compile Include="Fibonacci.cs" />
     <Compile Include="oddTest.cs" />
     <Compile Include="PrimeTest.cs" />
-    <Compile Include="UnitTest6.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mathmagician\Mathmagician.csproj">
