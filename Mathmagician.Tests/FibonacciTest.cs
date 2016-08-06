@@ -97,7 +97,7 @@ namespace Mathmagician.Tests
                 resultList.Add(z);
             }
             int expectedResult = 317811;
-            int actual = resultList[25];
+            int actual = resultList[26];
             Assert.AreEqual(expectedResult, actual);
         }
     }
