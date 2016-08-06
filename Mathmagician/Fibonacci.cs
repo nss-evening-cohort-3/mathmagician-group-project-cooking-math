@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    class Fibonacci : IMakeIntegerList
+    public class Fibonacci : IMakeIntegerList
     {
         public List<int> MakeListOfIntegers(int numbersToAdd)
         {
@@ -22,6 +22,11 @@ namespace Mathmagician
                 b = c;
             }
             return FibList;
+        }
+
+        public void WriteNumberListToConsole(List<int> integers)
+        {
+            throw new NotImplementedException();
         }
     }
 }
