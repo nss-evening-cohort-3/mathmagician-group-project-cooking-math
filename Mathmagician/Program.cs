@@ -91,7 +91,7 @@ namespace Mathmagician
 
                 // INTEGER METHOD
                 Integer my_int = new Integer();
-                my_int.WriteIntegersToConsole(my_int.Make_Integers(numberToWrite));
+                my_int.WriteNumberListToConsole(my_int.MakeListOfIntegers(numberToWrite));
 
 
                 // ODD METHOD
