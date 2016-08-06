@@ -26,7 +26,7 @@ namespace Mathmagician
                 Console.WriteLine("What type of number would you like me to display?");
                 Console.Write(prompt);
 
-              // The loop below is designed to catch a user's input of an invalid response to the first prompt.
+                // The loop below is designed to catch a user's input of an invalid response to the first prompt.
 
                 string showThisNumberType = null;  // Only gets a value after the user inputs a valid choice (on prompt)
 
@@ -39,7 +39,7 @@ namespace Mathmagician
                         showThisNumberType = "Yay";  // Indicates that the user has provided a valid input (and quits the loop)
                         Console.WriteLine("Okay, we'll show " + userRequest + "s." + System.Environment.NewLine);
                     }
-                    else if ( userRequest == "fibonacci")
+                    else if (userRequest == "fibonacci")
                     {
                         showThisNumberType = "Yay";  // Also indicates input of a valid choice (ending the loop)
                         Console.WriteLine("Okay, we'll show Fibonacci numbers." + System.Environment.NewLine);
@@ -52,7 +52,7 @@ namespace Mathmagician
                         return;  // Exits the program
                     }
                     else   // If the user's input is invalid, the following message (and prompt) appears
-                          // (This prompt will continue until one of the exit options --see 'else if' above -- or a valid choice is entered)
+                           // (This prompt will continue until one of the exit options --see 'else if' above -- or a valid choice is entered)
                     {
                         Console.WriteLine("Whoops! Please enter a valid choice (check your spelling?).");
                         Console.Write(prompt);
@@ -60,7 +60,7 @@ namespace Mathmagician
                 }
 
                 // Second prompt -- this time for the number of integers to display
-               
+
                 Console.WriteLine("How many numbers shall I display?");
                 Console.Write(prompt);
 
@@ -130,3 +130,4 @@ namespace Mathmagician
         }
     }
 }
+
