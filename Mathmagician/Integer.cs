@@ -8,17 +8,26 @@ namespace Mathmagician
 {
     public class Integer : IMakeIntegerList 
     {
+        public Integer(int number)
+        {
+            integer = number;
+            List<int> intList = new List<int>();
+        }
 
-        public List<int> MakeListOfIntegers(int numOfIntegersToWrite)
+        // integer property is modified by the original integer call from Program.cs
+        public int integer { get; set; }
+        // intList will be set through MakeListofIntegers
+        public List<int> intList { get; set; }
+
+        public virtual List<int> MakeListOfIntegers(int numOfIntegersToWrite)
         {
             int x = numOfIntegersToWrite;
-            List<int> IntList = new List<int>();
             
             for (int i = 1; i <= x; i++)
             {
-                IntList.Add(i);
+                intList.Add(i);
             }
-            return IntList;
+            return intList;
         }
 
         public void WriteNumberListToConsole(List<int> integers)

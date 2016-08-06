@@ -14,10 +14,22 @@ namespace Mathmagician.Tests
             //Arrange
 
             //Act
-            Integer my_int = new Integer(); //What I want to be able to do;
+            Integer my_int = new Integer(5); //What I want to be able to do;
+            int x = 5;
 
             //Assert
             Assert.IsNotNull(my_int);
+            Assert.AreEqual(x, my_int.integer);
+        }
+        [TestMethod]
+        public void IntegerModifyProperty()
+        {
+            Integer my_int = new Integer(1);
+            int x = 1;
+            my_int.integer = 5;
+            int expected = 5;
+            Assert.IsFalse(x == my_int.integer);
+            Assert.Equals(expected, my_int.integer);
         }
         [TestMethod]
         public void IntegerStartingValueIs1()
@@ -38,7 +50,7 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void IntegerEnsureMethodIsList()
         {
-            Integer my_int = new Integer();
+            Integer my_int = new Integer(5);
             List<int> testlist = my_int.MakeListOfIntegers(1);
 
             Assert.IsInstanceOfType(testlist, typeof(List<int>));
@@ -48,7 +60,7 @@ namespace Mathmagician.Tests
         {
             //Arrange
             int NumOfIntegersToWrite = 10;
-            Integer intTest = new Integer();
+            Integer intTest = new Integer(5);
             List<int> testlist = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             //Act
 
@@ -60,7 +72,7 @@ namespace Mathmagician.Tests
         public void IntegersAreCorrectSequence()
         {
             int numberOfIntegersToWrite = 9;
-            Integer intTest = new Integer();
+            Integer intTest = new Integer(5);
             List<int> testListGood = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             List<int> testListBad = new List<int> { 1, 3, 4, 8, 10, 7, 2, 5, 9, 6 };
             List<int> testListWrongCount = new List<int> { 1, 10 };
@@ -75,7 +87,7 @@ namespace Mathmagician.Tests
         public void IntegerTestLastInteger()
         {
             string lastNumber = "10";
-            Integer intTest = new Integer();
+            Integer intTest = new Integer(5);
             List<int> testList = intTest.MakeListOfIntegers(11);
             Assert.AreEqual(testList[9].ToString(), lastNumber);
         }
