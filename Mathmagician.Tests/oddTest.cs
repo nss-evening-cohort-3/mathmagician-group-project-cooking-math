@@ -63,9 +63,5 @@ namespace Mathmagician.Tests
     }
 }
 
-//even number
-//odd number
-//string
-//list
-//parameter is integer
+
 
