@@ -8,6 +8,8 @@ namespace Mathmagician
 {
     public class Integer
     {
+        // This code will be re-worked in a subsequent test to be more TDD appropriate.
+        // Leaving it in for now just to demonstrate that the first run of the CLI is working.
 
         public List<int> Make_Integers(int numOfIntegersToWrite)
         {
