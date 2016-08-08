@@ -10,13 +10,13 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void OddNumberIsAnObject()
         {
-            Odd oddnumbers = new Odd();
+            Odd oddnumbers = new Odd(10);
             Assert.IsNotNull(oddnumbers);
         }
         [TestMethod]
         public void OddNumberMakeListReturnsTypeList()
         {
-            Odd oddnumbers = new Odd();
+            Odd oddnumbers = new Odd(10);
             List<int> oddList = oddnumbers.MakeListOfIntegers(0);
             Assert.IsInstanceOfType(oddList, typeof(List<int>));
         }
@@ -56,7 +56,7 @@ namespace Mathmagician.Tests
         public void OddListProvidesCorrectNumberofOddNumbers()
         {
             int desiredNumberofOddNumbers = 10;
-            Odd odd = new Odd();
+            Odd odd = new Odd(10);
             List<int> iwanttenoddnumbers = odd.MakeListOfIntegers(desiredNumberofOddNumbers);
             Assert.AreEqual(desiredNumberofOddNumbers, iwanttenoddnumbers.Count);
         }

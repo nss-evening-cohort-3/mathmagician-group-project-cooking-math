@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Odd : IMakeIntegerList
+    public class Odd : Integer
     {
-        
-        private List<int> OddNumberList = new List<int>();
-        public List<int> MakeListOfIntegers(int number)
+        public Odd(int number) : base (number)
+        { }
+
+        public override List<int> MakeListOfIntegers(int number)
         {
             for (int i = 1  ; i < number * 2; i++)
-            {
+            {   
                 if (!(i % 2 == 0))
                 {
-                    OddNumberList.Add(i);
+                    intList.Add(i);
                 }
                 else continue;
             }
-            return OddNumberList;
+            return intList;
         }
 
-        public void WriteNumberListToConsole(List<int> integers)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
 
