@@ -36,12 +36,13 @@ namespace Mathmagician
 
                     if (userRequest == "odd" || userRequest == "even" || userRequest == "prime" || userRequest == "integer")
                     {
-                        showThisNumberType = "Yay";  // Indicates that the user has provided a valid input (and quits the loop)
+                        showThisNumberType = userRequest;  // Indicates that the user has provided a valid input (and quits the loop)
                         Console.WriteLine("Okay, we'll show " + userRequest + "s." + System.Environment.NewLine);
+                        
                     }
                     else if (userRequest == "fibonacci")
                     {
-                        showThisNumberType = "Yay";  // Also indicates input of a valid choice (ending the loop)
+                        showThisNumberType = userRequest;  // Also indicates input of a valid choice (ending the loop)
                         Console.WriteLine("Okay, we'll show Fibonacci numbers." + System.Environment.NewLine);
                     }
                     // Options that quit the program if user can't figure out how (or refuses) to input a valid choice:
@@ -89,23 +90,31 @@ namespace Mathmagician
                 // Logic will go here (probably a switch statment) that takes the stored input and uses it to call a method //
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                // INTEGER METHOD
-                Integer my_int = new Integer();
-                my_int.WriteIntegersToConsole(my_int.Make_Integers(numberToWrite));
+                switch (showThisNumberType)
+                {
+                    case "integer":
+                        // Code that calls the integer method will go here
+                        Console.WriteLine("You chose integers and you want " + userNumber + " numbers to display.");
+                        break;
+                    case "prime":
+                        // Code that calls the prime number method will go here
+                        Console.WriteLine("You chose prime and you want " + userNumber + " numbers to display.");
+                        break;
+                    case "odd":
+                        // Code that calls the odd number method will go here
+                        Console.WriteLine("You chose odds and you want " + userNumber + " numbers to display.");
+                        break;
+                    case "even":
+                        // Code that calls the even number method will go here
+                        Console.WriteLine("You chose even and you want " + userNumber + " numbers to display.");
+                        break;
+                    case "fibonacci":
+                        // Code that calls the Fibonacci method will go here
+                        Console.WriteLine("You chose Fibonacci numbers and you want " + userNumber + " numbers to display.");
+                        break;
+                }
 
-
-                // ODD METHOD
-
-
-                // FIBONNACI METHOD
-
-
-                // EVEN METHOD
-
-
-                // PRIME METHOD
-
-                // Allows user to choose to quit or continue
+                // The following code allows user to choose to quit or continue
 
                 Console.WriteLine(System.Environment.NewLine + "Go again: Yes or No?");
                 string userChoice = Console.ReadLine().ToLower();
@@ -117,10 +126,10 @@ namespace Mathmagician
                     Console.ReadLine();
                     return;
                 }
-                else if (userChoice != "yes")
+                else if (userChoice != "yes")  // Currently this will fail if the user types "y"
                 {
                     goAgain = false;
-                    Console.WriteLine("You do not follow instructions very well.  Good day to you!");
+                    Console.WriteLine("You typed " + userChoice + ". You do not follow instructions very well.  Good day to you!");
                     Console.ReadLine();
                     return;
                 }
