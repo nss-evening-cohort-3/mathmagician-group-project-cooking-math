@@ -14,6 +14,17 @@ namespace Mathmagician.Tests
             Assert.IsNotNull(oddnumbers);
         }
         [TestMethod]
+        public void OddHasProperties()
+        {
+            Odd odd = new Odd(10);
+            int expectedIntProperty = odd.integer;
+            List<int> expectedListProperty = odd.intList;
+
+            Assert.IsNotNull(expectedIntProperty);
+            Assert.AreEqual(expectedIntProperty, 10);
+            Assert.IsInstanceOfType(expectedListProperty, typeof(List<int>));
+        }
+        [TestMethod]
         public void OddNumberMakeListReturnsTypeList()
         {
             Odd oddnumbers = new Odd(5);
@@ -21,36 +32,22 @@ namespace Mathmagician.Tests
             Assert.IsInstanceOfType(oddList, typeof(List<int>));
         }
         [TestMethod]
-        public void OddStartingOddNumberIsNotEven()
-        {
-            int startingNumber = 1;
-
-            Assert.IsFalse(startingNumber % 2 == 0);
-        }
-        [TestMethod]
         public void OddStartingOddNumberIsOdd()
         {
-            int startingNumber = 1;
-            Assert.IsTrue(startingNumber % 2 == 1);
+            Odd odd = new Odd(5);
+            List<int> oddList = odd.MakeListOfIntegers(5);
+            int expected = 1;
+            int actual = oddList[0]; //1
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void OddSequenceIsEveryOtherNumber()
         {
-            int a = 1;
-            int b = 2;
-            int expected = 3;
-            int actual = a + b;
-            Assert.AreEqual(expected, actual);
-        }
-        [TestMethod]
-        public void OddIntegerIsNotAString()
-        {
-            int a = 1;
-            string b = "2";
-            string actual = a + b;
-            int expected = 3;
-            Assert.AreNotEqual(expected, actual);
+            Odd odd = new Odd(5);
+            List<int> oddList = odd.MakeListOfIntegers(5);
+            List<int> expectedSequenceList = new List<int> { 1, 3, 5, 7, 9 };
+            CollectionAssert.AreEquivalent(expectedSequenceList, oddList);
         }
         [TestMethod]
         public void OddListProvidesCorrectNumberofOddNumbers()
@@ -58,7 +55,24 @@ namespace Mathmagician.Tests
             int desiredNumberofOddNumbers = 10;
             Odd odd = new Odd(5);
             List<int> iwanttenoddnumbers = odd.MakeListOfIntegers(desiredNumberofOddNumbers);
+
             Assert.AreEqual(desiredNumberofOddNumbers, iwanttenoddnumbers.Count);
+        }
+        [TestMethod]
+        public void OddMethodAcceptsLargeIntegerNumber()
+        {
+            Odd odd = new Odd(100000);
+            List<int> oddList = odd.MakeListOfIntegers(odd.integer);
+
+            Assert.IsNotNull(odd.intList);
+        }
+        [TestMethod]
+        public void OddMethodDoesNotAcceptLongInt()
+        {
+            //Odd odd = new Odd(10); // method does not accept long 64 bit integer
+            //List<int> OddList = odd.MakeListOfIntegers(odd.integer);
+
+            //Assert.IsNull(OddList);
         }
     }
 }
