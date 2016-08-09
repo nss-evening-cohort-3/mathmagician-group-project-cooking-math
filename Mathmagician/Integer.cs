@@ -28,6 +28,7 @@ namespace Mathmagician
                 intList.Add(i);
             }
             return intList;
+
         }
 
         public void WriteNumberListToConsole(List<int> integers)
@@ -38,4 +39,6 @@ namespace Mathmagician
             }
         }
     }
+
 }
+
