@@ -105,8 +105,10 @@ namespace Mathmagician
                         Console.WriteLine("You chose odds and you want " + userNumber + " numbers to display.");
                         break;
                     case "even":
-                        // Code that calls the even number method will go here
-                        Console.WriteLine("You chose even and you want " + userNumber + " numbers to display.");
+                        // code that calls the even number method:
+                        Even ourEvens = new Even(numberToWrite);
+                        List<int> evensList = ourEvens.MakeListOfIntegers(numberToWrite);
+                        ourEvens.WriteNumberListToConsole(evensList);
                         break;
                     case "fibonacci":
                         // Code that calls the Fibonacci method will go here
@@ -119,14 +121,14 @@ namespace Mathmagician
                 Console.WriteLine(System.Environment.NewLine + "Go again: Yes or No?");
                 string userChoice = Console.ReadLine().ToLower();
 
-                if (userChoice == "no")  // If the user chooses to exit
+                if (userChoice == "no" || userChoice == "n")  // If the user chooses to exit
                 {
                     goAgain = false;
                     Console.WriteLine("Thanks for playing!");
                     Console.ReadLine();
                     return;
                 }
-                else if (userChoice != "yes")  // Currently this will fail if the user types "y"
+                else if (userChoice != "yes" || userChoice != "y") 
                 {
                     goAgain = false;
                     Console.WriteLine("You typed " + userChoice + ". You do not follow instructions very well.  Good day to you!");
