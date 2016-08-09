@@ -11,7 +11,7 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void CanMakeInstanceOfEven()
         {
-            Even myNewEven = new Even();
+            Even myNewEven = new Even(4);
             Assert.IsNotNull(myNewEven);
         }
         
@@ -19,8 +19,8 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void ClassReturnsAList()
         {
-            Even even = new Even();
-            var coolList = even.MakeEvenList(0);
+            Even even = new Even(0);
+            var coolList = even.MakeListOfIntegers(0);
             Assert.IsInstanceOfType(coolList, typeof(List<int>));
         }
 
@@ -28,8 +28,8 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void EvenReturnsTheRightNumberOfElements()
         {
-            Even even = new Even();
-            var coolList = even.MakeEvenList(8);
+            Even even = new Even(8);
+            var coolList = even.MakeListOfIntegers(8);
             Assert.AreEqual(8, coolList.Count);
         }
   
@@ -37,9 +37,9 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void EvenReturnsAListWithTheCorrectSequence()
         {
-            Even even = new Even();
+            Even even = new Even(4);
             List<int> rightList = new List<int> { 2, 4, 6, 8 };
-            var coolList = even.MakeEvenList(4);
+            var coolList = even.MakeListOfIntegers(4);
             CollectionAssert.AreEqual(coolList, rightList);
         }
 

@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Even
+    public class Even : Integer
     {
-        
-        public List<int> MakeEvenList(int num)
-        {
-            List<int> myEvenList = new List<int>();
 
-            for (int i = 1; myEvenList.Count != num; i++)
+        public Even(int number) : base(number)
+        {
+            integer = number;
+            evensList = new List<int>();
+        }
+
+        // intList will be set through MakeListofIntegers
+        public List<int> evensList { get; set; }
+
+
+        public override List<int> MakeListOfIntegers(int num)
+        {
+
+            for (int i = 1; evensList.Count != num; i++)
             {
                 if (i % 2 == 0)
                 {
-                    myEvenList.Add(i);
+                    evensList.Add(i);
                 }
             }
-            return myEvenList;
+            return evensList;
         }
 
 
