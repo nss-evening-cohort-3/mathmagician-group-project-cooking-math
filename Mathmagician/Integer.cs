@@ -14,6 +14,7 @@ namespace Mathmagician
             this.intList = new List<int>();
         }
 
+
         // integer property is modified by the original integer call from Program.cs
         public int integer { get; set; }
         // intList will be set through MakeListofIntegers

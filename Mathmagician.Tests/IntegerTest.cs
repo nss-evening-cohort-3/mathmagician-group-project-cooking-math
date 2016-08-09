@@ -83,6 +83,7 @@ namespace Mathmagician.Tests
             List<int> testListBad = new List<int> { 1, 3, 4, 8, 10, 7, 2, 5, 9, 6 };
             List<int> actualSequence = intTest.intList;
 
+
             CollectionAssert.AreEquivalent(actualSequence, testListGood);
             CollectionAssert.AreNotEqual(actualSequence, testListBad);
         }
