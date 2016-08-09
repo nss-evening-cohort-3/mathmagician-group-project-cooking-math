@@ -11,7 +11,7 @@ namespace Mathmagician
         public Integer(int number)
         {
             integer = number;
-            intList = new List<int>();
+            this.intList = new List<int>();
         }
 
         // integer property is modified by the original integer call from Program.cs
