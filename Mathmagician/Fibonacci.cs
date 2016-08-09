@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    class Fibonacci : IMakeIntegerList
+    public class Fibonacci : Integer
     {
-        public List<int> MakeListOfIntegers(int numbersToAdd)
+        public Fibonacci(int number) : base(number)
+        { }
+
+        public override List<int> MakeListOfIntegers(int number)
         {
-            int x = numbersToAdd;
+            int x = number;
             int a = 0;
             int b = 1;
-            List<int> FibList = new List<int>();
-            for (int i = 0; i <= x; i++)
+            for (int i = 0; i < x; i++)
             {
                 int c = a + b;
-                FibList.Add(a + b);
+                intList.Add(a + b);
                 a = b;
                 b = c;
             }
-            return FibList;
+            return intList;
         }
     }
 }
