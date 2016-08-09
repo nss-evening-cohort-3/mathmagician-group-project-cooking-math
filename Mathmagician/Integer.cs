@@ -19,6 +19,7 @@ namespace Mathmagician
         // intList will be set through MakeListofIntegers
         public List<int> intList { get; set; }
 
+
         public virtual List<int> MakeListOfIntegers(int numOfIntegersToWrite)
         {
             int x = numOfIntegersToWrite;

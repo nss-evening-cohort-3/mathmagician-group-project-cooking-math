@@ -76,6 +76,7 @@ namespace Mathmagician.Tests
         [TestMethod]
         public void IntegersAreCorrectSequence()
         {
+
             Integer intTest = new Integer(10);
             intTest.MakeListOfIntegers(intTest.integer);
             List<int> testListGood = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
