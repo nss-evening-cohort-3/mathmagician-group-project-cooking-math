@@ -13,7 +13,8 @@ namespace Mathmagician
 
         public override List<int> MakeListOfIntegers(int number)
         {
-            int x = number;
+            //intList.Insert()
+            int x = number - 2;
             int a = 0;
             int b = 1;
             for (int i = 0; i < x; i++)
@@ -23,6 +24,8 @@ namespace Mathmagician
                 a = b;
                 b = c;
             }
+            intList.Insert(0, 0);
+            intList.Insert(1, 1);
             return intList;
         }
     }
