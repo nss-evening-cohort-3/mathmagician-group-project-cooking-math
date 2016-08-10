@@ -10,7 +10,7 @@ namespace Mathmagician
     {
         public Odd(int number) : base(number)
         { }
-
+        
         public override List<int> MakeListOfIntegers(int number)
         {
             for (int i = 1; i < number * 2; i++)
@@ -23,7 +23,5 @@ namespace Mathmagician
             }
             return intList;
         }
-
-
     }
 }
