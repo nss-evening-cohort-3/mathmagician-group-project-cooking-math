@@ -47,9 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Even.cs" />
     <Compile Include="IMakeIntegerList.cs" />
     <Compile Include="Integer.cs" />
-    <Compile Include="Odd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

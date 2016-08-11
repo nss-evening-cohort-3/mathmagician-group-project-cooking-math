@@ -106,9 +106,9 @@ namespace Mathmagician
                         break;
                     case "even":
                         // code that calls the even number method:
-                        //Even ourEvens = new Even(numberToWrite);
-                        //List<int> evensList = ourEvens.MakeListOfIntegers(numberToWrite);
-                        //ourEvens.WriteNumberListToConsole(evensList);
+                        Even ourEvens = new Even(numberToWrite);
+                        List<int> evensList = ourEvens.MakeListOfIntegers(numberToWrite);
+                        ourEvens.WriteNumberListToConsole(evensList);
                         break;
                     case "fibonacci":
                         // Code that calls the Fibonacci method will go here
@@ -128,7 +128,7 @@ namespace Mathmagician
                     Console.ReadLine();
                     return;
                 }
-                else if (userChoice != "yes" || userChoice != "y")
+                else if (userChoice != "yes" || userChoice != "y") 
                 {
                     goAgain = false;
                     Console.WriteLine("You typed " + userChoice + ". You do not follow instructions very well.  Good day to you!");
@@ -141,3 +141,4 @@ namespace Mathmagician
         }
     }
 }
+
