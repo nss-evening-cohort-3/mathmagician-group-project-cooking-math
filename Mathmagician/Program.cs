@@ -38,7 +38,7 @@ namespace Mathmagician
                     {
                         showThisNumberType = userRequest;  // Indicates that the user has provided a valid input (and quits the loop)
                         Console.WriteLine("Okay, we'll show " + userRequest + "s." + System.Environment.NewLine);
-                        
+
                     }
                     else if (userRequest == "fibonacci")
                     {
