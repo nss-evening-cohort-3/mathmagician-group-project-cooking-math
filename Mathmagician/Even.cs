@@ -11,25 +11,20 @@ namespace Mathmagician
 
         public Even(int number) : base(number)
         {
-            integer = number;
-            evensList = new List<int>();
         }
-
-        // intList will be set through MakeListofIntegers
-        public List<int> evensList { get; set; }
 
 
         public override List<int> MakeListOfIntegers(int num)
         {
 
-            for (int i = 1; evensList.Count != num; i++)
+            for (int i = 1; intList.Count != num; i++)
             {
                 if (i % 2 == 0)
                 {
-                    evensList.Add(i);
+                    intList.Add(i);
                 }
             }
-            return evensList;
+            return intList;
         }
 
 
