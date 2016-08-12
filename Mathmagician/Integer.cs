@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Integer : IMakeIntegerList 
+    public class Integer : IMakeIntegerList
     {
         public Integer(int number)
         {
@@ -24,7 +24,7 @@ namespace Mathmagician
         public virtual List<int> MakeListOfIntegers(int numOfIntegersToWrite)
         {
             int x = numOfIntegersToWrite;
-            
+
             for (int i = 1; i <= x; i++)
             {
                 intList.Add(i);
