@@ -114,7 +114,9 @@ namespace Mathmagician
                         break;
                     case "fibonacci":
                         // Code that calls the Fibonacci method will go here
-                        Console.WriteLine("You chose Fibonacci numbers and you want " + userNumber + " numbers to display.");
+                        Fibonacci fibonacci = new Fibonacci(numberToWrite);
+                        List<int> fibList = fibonacci.MakeListOfIntegers(numberToWrite);
+                        fibonacci.WriteNumberListToConsole(fibList);
                         break;
                 }
 
