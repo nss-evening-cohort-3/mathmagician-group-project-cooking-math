@@ -93,8 +93,10 @@ namespace Mathmagician
                 switch (showThisNumberType)
                 {
                     case "integer":
-                        // Code that calls the integer method will go here
-                        Console.WriteLine("You chose integers and you want " + userNumber + " numbers to display.");
+                        // Code that calls the integer method
+                        Integer integer = new Integer(numberToWrite);
+                        List<int> intList = integer.MakeListOfIntegers(numberToWrite);
+                        integer.WriteNumberListToConsole(intList);
                         break;
                     case "prime":
                         // Code that calls the prime number method will go here
@@ -105,10 +107,10 @@ namespace Mathmagician
                         Console.WriteLine("You chose odds and you want " + userNumber + " numbers to display.");
                         break;
                     case "even":
-                        // code that calls the even number method:
+                        // Code that calls the even number method:
                         Even ourEvens = new Even(numberToWrite);
-                        List<int> intList = ourEvens.MakeListOfIntegers(numberToWrite);
-                        ourEvens.WriteNumberListToConsole(intList);
+                        List<int> evensList = ourEvens.MakeListOfIntegers(numberToWrite);
+                        ourEvens.WriteNumberListToConsole(evensList);
                         break;
                     case "fibonacci":
                         // Code that calls the Fibonacci method will go here
