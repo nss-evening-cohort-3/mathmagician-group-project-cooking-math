@@ -127,6 +127,7 @@ namespace Mathmagician
                 // The following code allows user to choose to quit or continue
 
                 Console.WriteLine(System.Environment.NewLine + "Go again: Yes or No?");
+                string[] yesAnswers = { "yes", "y", "sure", "ya", "yeah", "ja", "yup", "yo", "let's cook some math", "ok", "okay", "fine", "why not?", "i guess", "you're not my real dad", "i am the one who knocks" };
                 string userChoice = Console.ReadLine().ToLower();
 
                 if (userChoice == "no" || userChoice == "n")  // If the user chooses to exit
@@ -136,17 +137,17 @@ namespace Mathmagician
                     Console.ReadLine();
                     return;
                 }
-                else if (userChoice != "yes" ) 
+                else if (!yesAnswers.Any(userChoice.Contains))
                 {
                     goAgain = false;
                     Console.WriteLine("You typed " + userChoice + ". You do not follow instructions very well.  Good day to you!");
                     Console.ReadLine();
                     return;
                 }
-                Console.WriteLine("");
             }
-
+            Console.WriteLine("");
         }
-    }
+       }
 }
+
 
