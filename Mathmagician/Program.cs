@@ -104,7 +104,9 @@ namespace Mathmagician
                         break;
                     case "odd":
                         // Code that calls the odd number method will go here
-                        Console.WriteLine("You chose odds and you want " + userNumber + " numbers to display.");
+                        Odd odd = new Odd(numberToWrite);
+                        List<int> oddList = odd.MakeListOfIntegers(numberToWrite);
+                        odd.WriteNumberListToConsole(oddList);
                         break;
                     case "even":
                         // Code that calls the even number method:
