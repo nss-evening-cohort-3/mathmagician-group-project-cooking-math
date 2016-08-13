@@ -18,7 +18,7 @@ namespace Mathmagician.Tests
         {
             Odd odd = new Odd(10);
             int expectedIntProperty = odd.integer;
-            List<int> expectedListProperty = odd.intList;
+            List<int> expectedListProperty = odd.oddList;
 
             Assert.IsNotNull(expectedIntProperty);
             Assert.AreEqual(expectedIntProperty, 10);
@@ -64,7 +64,7 @@ namespace Mathmagician.Tests
             Odd odd = new Odd(100000);
             List<int> oddList = odd.MakeListOfIntegers(odd.integer);
 
-            Assert.IsNotNull(odd.intList);
+            Assert.IsNotNull(odd.oddList);
         }
         [TestMethod]
         public void OddMethodDoesNotAcceptLongInt()
