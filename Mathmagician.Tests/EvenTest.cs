@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Mathmagician.Tests
 {
     [TestClass]
-    public class EvensTest
+    public class EvenTest
     {
         // can make instance of class
         [TestMethod]
@@ -17,7 +17,7 @@ namespace Mathmagician.Tests
         
         // class returns a list even if 0 is passed in
         [TestMethod]
-        public void ClassReturnsAList()
+        public void EvenClassReturnsAList()
         {
             Even even = new Even(0);
             var coolList = even.MakeListOfIntegers(0);

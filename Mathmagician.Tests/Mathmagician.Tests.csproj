@@ -53,8 +53,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="EvensTest.cs" />
+    <Compile Include="EvenTest.cs" />
     <Compile Include="FibonacciTest.cs" />
+    <Compile Include="PrimeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OddTest.cs" />
     <Compile Include="IntegerTest.cs" />
